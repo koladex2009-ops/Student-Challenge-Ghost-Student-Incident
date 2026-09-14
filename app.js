@@ -200,11 +200,13 @@ A complete Postman request would be:
 
 const express = require("express");
 const mongoose = require("mongoose");
+const morgan = require("morgan");
 const app = express();
 
 const port = 1212;
 
 app.use(express.json());
+app.use(morgan("dev"));
 
 const connectDB = async () => {
   try {
