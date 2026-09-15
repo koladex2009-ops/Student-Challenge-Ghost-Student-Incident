@@ -425,7 +425,7 @@ app.delete("/delete-student/:id", async (req, res) => {
 
   if (!mongoose.Types.ObjectId.isValid(id)) {
     return res.status(400).json({
-      message: "Invalid student Id. The ID must be a valid MongoDB ObjectID."
+      message: "Invalid student ID. The ID must be a valid MongoDB ObjectId."
     });
   };
 
